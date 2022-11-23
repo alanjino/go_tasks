@@ -1,0 +1,48 @@
+openapi: "3.0.3"
+
+info:
+  title: SaaS server Open REST API Specification
+  description: SaaS server Open REST API specification
+  version: 1.0.0
+
+servers:
+  - url: /
+
+paths:
+  /status:
+    get:
+      summary: Kubernetes readiness and liveness probe endpoint
+      responses:
+        '200':
+          description: successful operation
+
+  /hello:
+    post:
+      summary: Testing simple examle of hello
+      requestBody:
+        content:
+          application/text:
+            name:
+              type: string
+              description: Name
+      responses:
+        '200':
+          description: Hello <post request payload> response
+  /bye:
+    post:
+      summary: Testing simple examle of hello
+      requestBody:
+        content:
+          application/text:
+            name:
+              type: string
+              description: Name
+      responses:
+        '200':
+          description: Hello <post request payload> response
+
+    get:
+      summary: Kubernetes readiness and liveness probe endpoint
+      responses:
+        '200':
+          description: successful operation      
